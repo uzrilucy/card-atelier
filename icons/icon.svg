@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="ca-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2244"/>
+      <stop offset="1" stop-color="#15131f"/>
+    </linearGradient>
+    <linearGradient id="ca-foil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb3d9"/>
+      <stop offset=".3" stop-color="#c7b3ff"/>
+      <stop offset=".55" stop-color="#9fe7ff"/>
+      <stop offset=".8" stop-color="#b6ffd9"/>
+      <stop offset="1" stop-color="#fff2a8"/>
+    </linearGradient>
+    <linearGradient id="ca-face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2f5e"/>
+      <stop offset="1" stop-color="#211b35"/>
+    </linearGradient>
+    <radialGradient id="ca-glow" cx=".3" cy=".25" r=".8">
+      <stop offset="0" stop-color="#b9a2ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b9a2ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#ca-bg)"/>
+  <!-- 뒤 카드 -->
+  <rect x="206" y="104" width="196" height="294" rx="20" fill="#2c2546" transform="rotate(10 304 251)" opacity=".85"/>
+  <!-- 탑로더 슬리브 -->
+  <rect x="128" y="88" width="224" height="336" rx="24" fill="rgba(255,255,255,.06)" stroke="url(#ca-foil)" stroke-width="7"/>
+  <!-- 카드 면 -->
+  <rect x="146" y="106" width="188" height="300" rx="12" fill="url(#ca-face)"/>
+  <rect x="146" y="106" width="188" height="300" rx="12" fill="url(#ca-glow)"/>
+  <!-- 노치 -->
+  <rect x="216" y="94" width="48" height="6" rx="3" fill="#ece8f6" opacity=".35"/>
+  <!-- 실루엣 -->
+  <circle cx="240" cy="214" r="38" fill="#ece8f6" opacity=".92"/>
+  <path d="M176 352c10-46 34-72 64-72s54 26 64 72" fill="#ece8f6" opacity=".92"/>
+  <!-- 반사광 -->
+  <path d="M150 300 L330 140 L330 170 L150 330 Z" fill="#fff" opacity=".07"/>
+</svg>
