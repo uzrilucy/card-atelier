@@ -13,6 +13,7 @@ import { renderNotes } from './views/notes.js';
 import { renderVersions } from './views/versions.js';
 import { renderExport } from './views/export.js';
 import { openSettings } from './views/settings.js';
+import { openManual } from './ui/manual.js';
 import { analyzeFile, mergeLorebook, mergeRegex, projectFromAnalysis } from './porter.js';
 import { ingestImage, touch } from './store.js';
 
@@ -82,7 +83,7 @@ function buildShell() {
   const top = h('header.topbar', null,
     btn('', { kind: 'ghost', ico: 'back', title: '서재로', attrs: { class: 'btn ghost icon back' }, onClick: () => go('#/') }),
     h('div.top-title', null, titleH, ver),
-    h('div.top-actions', null, badge));
+    h('div.top-actions', null, btn('', { kind: 'ghost', ico: 'book', title: '사용 매뉴얼', onClick: openManual }), badge));
   app.replaceChildren(h('div.shell', null, rail, h('div.main', null, top, banner, content)));
   shellEls = { nav, titleH, ver, badge, banner, content };
 }
