@@ -6,6 +6,7 @@ import { go, projectHash, rerender } from '../ui/nav.js';
 import { analyzeFile, projectFromAnalysis, backupBlob, baseName } from '../porter.js';
 import { uuid } from '../core/codec.js';
 import { openSettings } from './settings.js';
+import { openManual } from '../ui/manual.js';
 
 const view = { q: '', sort: 'recent', trash: false };
 
@@ -31,6 +32,7 @@ export async function renderShelf(root) {
       h('img', { src: APP_ICON, alt: '' }),
       h('div', null, h('h1', null, '카드 아틀리에'), h('p', null, '실리태번 캐릭터 카드 제작실'))),
     h('div.actions', null,
+      btn('매뉴얼', { ico: 'book', onClick: openManual }),
       btn('가져오기', { ico: 'import', onClick: () => importFlow() }),
       btn('새 카드', { kind: 'primary', ico: 'plus', onClick: newCardFlow }),
       btn('', { kind: 'ghost', ico: 'settings', title: '설정', onClick: openSettings })));

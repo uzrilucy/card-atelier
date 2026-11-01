@@ -2,6 +2,7 @@
 import { h, modal, segmented, inputField, selectField, btn, toast, download } from '../ui/dom.js';
 import { S, saveSettings, storageInfo, requestPersist, loadProjects } from '../store.js';
 import { allBackupsZip } from '../porter.js';
+import { openManual } from '../ui/manual.js';
 import { APP_VERSION } from '../version.js';
 
 const fmtBytes = (n) => (n > 1e9 ? `${(n / 1e9).toFixed(1)}GB` : n > 1e6 ? `${(n / 1e6).toFixed(1)}MB` : `${Math.round(n / 1e3)}KB`);
@@ -17,6 +18,7 @@ export async function openSettings() {
   drawPersist(info.persisted);
 
   const body = h('div', null,
+    h('div.field', null, btn('사용 매뉴얼 열기', { ico: 'book', onClick: openManual })),
     h('div.field', null, h('div.field-label', null, '화면 테마'),
       segmented({
         label: '화면 테마',
