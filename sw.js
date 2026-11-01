@@ -1,6 +1,6 @@
 // 카드 아틀리에 서비스 워커 — 오프라인 실행용 캐시
 // 릴리스마다 CACHE 값을 올려야 새 파일이 반영됩니다.
-const CACHE = 'card-atelier-v0.1.1';
+const CACHE = 'card-atelier-v0.1.2';
 const SHELL = [
   './', 'index.html', 'manual.html', 'manifest.webmanifest', 'css/app.css',
   'fonts/pretendard/pretendardvariable-dynamic-subset.css', 'fonts/gowun/gowun-batang.css', 'fonts/jbmono/jbmono.css',
