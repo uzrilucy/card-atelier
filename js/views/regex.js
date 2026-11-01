@@ -99,7 +99,7 @@ export function renderRegex(root) {
     const outBox = h('div');
     const runBench = () => {
       const input = sample.value;
-      const macros = { user: S.settings.previewUser || 'User', char: P.card.name || 'Char' };
+      const macros = { user: S.settings.previewUser || '당신', char: P.card.name || 'Char' };
       let text = input, err = null, count = 0;
       const chain = bench.mode === 'single' ? [r] : P.regex.filter((x) => !x.disabled && (x.placement || []).includes(2));
       for (const s of chain) {
