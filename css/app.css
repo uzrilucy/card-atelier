@@ -683,3 +683,7 @@ kbd { font: 600 11.5px/1 var(--font-ui); padding: 3px 6px; border-radius: 5px; b
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
+
+/* HTML 매뉴얼: 좁은 화면에서도 내부 문서를 끝까지 스크롤 */
+.manual-modal .modal-body { padding: 0; overflow: hidden; min-height: 0; }
+.manual-frame { display: block; border: 0; width: 100%; flex: 1; min-height: 0; background: var(--bg); border-radius: 0 0 var(--r-lg) var(--r-lg); }
