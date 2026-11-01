@@ -21,7 +21,7 @@ export const S = {
   saveErr: '',
   savedAt: 0,
   stale: false,
-  settings: { theme: 'auto', previewUser: '룽', autoSnapMin: 10 },
+  settings: { theme: 'auto', previewUser: '당신', autoSnapMin: 10 },
   lastSnapAt: 0,
   lastSnapHash: '',
 };
@@ -59,6 +59,8 @@ export function broadcast(type, extra = {}) { channel?.postMessage({ type, tab: 
 export async function loadSettings() {
   const s = await getSetting('app', null);
   if (s) Object.assign(S.settings, s);
+  // 이전 기본 이름만 새 기본값으로 맞추고, 다른 사용자 지정 이름은 유지합니다.
+  if (S.settings.previewUser === '룽') S.settings.previewUser = '당신';
   applyTheme();
 }
 export async function saveSettings() {
